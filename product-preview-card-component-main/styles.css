@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,700&display=swap");
+/* 
+===============
+Root And Reset
+===============
+*/
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --cream: hsl(30, 38%, 92%);
+  --white: hsl(0, 0%, 100%);
+  --font-size-paragraph: 14px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 
+===============
+Body
+===============
+*/
+
+body {
+  background-color: var(--cream);
+  padding: 1rem;
+  min-width: 340px;
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 
+===============
+Product Style
+===============
+*/
+
+article {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  border-radius: 10px;
+
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.image {
+  filter: brightness(85%);
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+}
+.content {
+  padding: 1.5rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* 
+===============
+Typographi
+===============
+*/
+
+p:first-child {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+h2,
+span:first-child {
+  font-weight: 700;
+  font-size: 2rem;
+  font-family: "Fraunces", serif;
+}
+span:first-child {
+  color: var(--dark-cyan);
+}
+p,
+.prev-price,
+button {
+  font-family: "Montserrat", sans-serif;
+}
+p,
+.prev-price {
+  font-size: 14px;
+  color: var(--dark-grayish-blue);
+}
+.paragraph {
+  line-height: 160%;
+  width: 92%;
+}
+
+/* 
+===============
+Prices
+===============
+*/
+
+.prices {
+  display: flex;
+  gap: 1rem;
+  padding: 0.75rem 0;
+}
+
+.prev-price {
+  text-decoration: line-through;
+  padding-top: 0.5rem;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  border-radius: 5px;
+  padding: 1rem;
+  color: var(--white);
+  background: var(--dark-cyan);
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  font-weight: 700;
+}
+button:hover {
+  filter: brightness(70%);
+}
+/* 
+============
+Media Queries
+============
+*/
+
+@media only screen and (min-width: 900px) {
+  article {
+    flex-direction: row;
+    max-width: 710px;
+  }
+  .image {
+    content: url("./images/image-product-desktop.jpg");
+    border-radius: 10px 0 0 10px;
+  }
+
+  .content {
+    gap: 1.25rem;
+    margin: auto 0;
+    width: 100%;
+  }
+}
