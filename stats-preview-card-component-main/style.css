@@ -129,7 +129,7 @@ Views
 Media Queries
 */
 @media screen and (min-width: 930px) {
-  body{
+  body {
     align-items: center;
   }
   article {
@@ -151,11 +151,12 @@ Media Queries
   }
   .image {
     content: url("./images/image-header-desktop.jpg");
+    height: 26.6rem;
   }
   .content {
     align-items: center;
     width: 55%;
-    padding: 0 3rem;
+    padding: 4rem 3rem;
     margin-left: 1.25rem;
   }
 
