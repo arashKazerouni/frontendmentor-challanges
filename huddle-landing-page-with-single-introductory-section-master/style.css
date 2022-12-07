@@ -1,0 +1,166 @@
+:root {
+  --Soft-Magenta: hsl(300, 69%, 71%);
+  --Violet: hsl(257, 40%, 49%);
+}
+/*=========================================== 
+Body and Resets
+ ===========================================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+
+body {
+  background: url("./images/bg-mobile.svg") no-repeat var(--Violet);
+  background-size: 103% 42%;
+  background-position: unset;
+  font-family: sans-serif;
+  color: #fff;
+  height: 90vh;
+  margin: 0 auto;
+}
+img {
+  width: 100%;
+}
+/*=========================================== 
+  Mockups
+ ===========================================*/
+.mockups {
+  flex-grow: 3;
+}
+/*=========================================== 
+Container
+ ===========================================*/
+.container {
+  display: flex;
+  width: 85%;
+  margin: 0 auto;
+  text-align: center;
+  flex-direction: column;
+  gap: 3.5rem;
+  max-width: 350px;
+  /* max-width: 445px; */
+}
+/*=========================================== 
+Header and Logo
+ ===========================================*/
+
+header {
+  display: flex;
+  margin-top: 2rem;
+}
+.logo {
+  margin-right: auto;
+  width: 40%;
+}
+/*=========================================== 
+Main
+ ===========================================*/
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+/*=========================================== 
+Typography 
+===========================================*/
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.title {
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+}
+.text {
+  color: rgba(255, 255, 255, 0.829);
+  font-size: 1.11rem;
+  line-height: 1.6rem;
+  width: 92.5%;
+}
+
+/*=========================================== 
+ Button
+===========================================*/
+button {
+  font-size: 1.1rem;
+  color: var(--Violet);
+  background-color: #fff;
+  padding: 0.9rem;
+  width: 69%;
+  margin: 0 auto;
+  text-align: center;
+  border: none;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+}
+button:hover {
+  background: var(--Soft-Magenta);
+  color: white;
+}
+/*=========================================== 
+ Footer and Icons
+===========================================*/
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  width: 34%;
+  margin: 1rem auto;
+}
+
+ul {
+  list-style: none;
+}
+
+/*=========================================== 
+ Media Queries
+===========================================*/
+@media screen and (min-width: 1440px) {
+  html {
+    font-size: 20px;
+  }
+  body {
+    background-image: url("./images/bg-desktop.svg");
+    background-size: cover;
+  }
+  .logo {
+    width: 20%;
+  }
+  .container {
+    display: flex;
+    /* width: 100%; */
+    max-width: none;
+  }
+  main {
+    flex-direction: row;
+    align-items: center;
+    text-align: start;
+  }
+  button {
+    margin: 0;
+    width: 30%;
+  }
+  .title {
+    font-size: 2.7rem;
+    line-height: 3.7rem;
+  }
+  .social-icons {
+    width: 12%;
+    float: right;
+  }
+  .mockups {
+    width: 100%;
+  }
+  .content {
+   flex-basis: -moz-available;
+  }
+}
